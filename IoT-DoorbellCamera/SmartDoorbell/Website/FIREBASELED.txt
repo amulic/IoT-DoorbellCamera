@@ -1,0 +1,44 @@
+if (Firebase.getBool(fbdo, "/ledControl")) {
+
+      if (fbdo.dataTypeEnum() == firebase_rtdb_data_type_boolean) {
+      Serial.println(fbdo.to<bool>());
+    }
+
+    } else {
+    Serial.println(fbdo.errorReason());
+    }
+
+OH COME ON
+
+if (Firebase.getBool(fbdo, "/ledControl")) {
+
+      if (fbdo.dataTypeEnum() == firebase_rtdb_data_type_boolean) {
+        
+          
+          Serial.println("USO SAM");
+          
+        
+      }
+
+    } else {
+    Serial.println(fbdo.errorReason());
+    }
+  }
+
+
+{
+  "rules": {
+    ".read": "now < 1705446000000",  // 2024-1-17
+    ".write": "now < 1705446000000",  // 2024-1-17
+  }
+}
+
+WORKS
+  bool bVal;
+    Firebase.getBool(fbdo, F("/ledControl"), &bVal);
+ 
+    if(bVal?true:false) {
+      digitalWrite(LED_PIN,HIGH);
+      delay(1000);
+      digitalWrite(LED_PIN,LOW);
+    }

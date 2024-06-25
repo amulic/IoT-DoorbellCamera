@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamera</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="image-logo"><img id="logo-image" src="./image/logo.png"></div>
+  
+
+
+  <!-- Main Content Container -->
+  <div id="container">
+ 
+    
+    <div id="imageContainer">
+      <img id="image">
+    </div>
+    <div id="buttonContainer">
+      <!--<button id="toggleButton">Toggle LED</button>-->
+      <button id="startButton" onclick="peek();">Start</button>
+      <button id="captureButton" onclick="downloadImage();">Capture</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
